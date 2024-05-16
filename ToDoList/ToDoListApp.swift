@@ -17,11 +17,15 @@ import SwiftUI
 
 @main
 struct ToDoListApp: App {
+    
+    @StateObject var toDoItemViewModel: ToDoItemViewModel = ToDoItemViewModel()
+    
     var body: some Scene {
         WindowGroup {
             NavigationStack {
                 ToDoListView()
             }
+            .environmentObject(toDoItemViewModel)
         }
     }
 }

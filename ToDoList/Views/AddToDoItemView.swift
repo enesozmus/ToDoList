@@ -9,7 +9,12 @@ import SwiftUI
 
 struct AddToDoItemView: View {
     
+    @EnvironmentObject var toDoItemViewModel: ToDoItemViewModel
+    @Environment(\.dismiss) var dismiss
+    
     @State var textFieldText: String = ""
+    @State var alertTitle: String = ""
+    @State var showingAlert: Bool = false
     
     var body: some View {
         ScrollView {
@@ -21,7 +26,7 @@ struct AddToDoItemView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
                 
                 Button {
-                    
+                    saveButtonPressed()
                 } label: {
                     Text("SAVE")
                         .foregroundStyle(.white)
@@ -31,10 +36,34 @@ struct AddToDoItemView: View {
                         .background(Color.accentColor)
                         .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
                 }
+                .disabled(textFieldText.count < 3)
             }
             .padding(12)
         }
         .navigationTitle("Add an Item 🖊")
+        //.alert(isPresented: $showingAlert, content: getAlert)
+    }
+    
+    // MARK: FUNCTIONS
+    
+    func saveButtonPressed() {
+        if textIsAppropriate() {
+            toDoItemViewModel.addItem(title: textFieldText)
+            dismiss()
+        }
+    }
+    
+    func textIsAppropriate() -> Bool {
+        if textFieldText.count < 3 {
+            alertTitle = "Your new to do item must be at least 3 characters long!!! 😨😰😱"
+            showingAlert.toggle()
+            return false
+        }
+        return true
+    }
+    
+    func getAlert() -> Alert {
+        return Alert(title: Text(alertTitle))
     }
 }
 
@@ -42,4 +71,5 @@ struct AddToDoItemView: View {
     NavigationStack {
         AddToDoItemView()
     }
+    .environmentObject(ToDoItemViewModel())
 }

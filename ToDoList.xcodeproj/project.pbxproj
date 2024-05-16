@@ -14,6 +14,7 @@
 		DF25C2BF2BF688B90086AA15 /* ToDoListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF25C2BE2BF688B90086AA15 /* ToDoListRowView.swift */; };
 		DF25C2C12BF68E8F0086AA15 /* AddToDoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF25C2C02BF68E8F0086AA15 /* AddToDoItemView.swift */; };
 		DF25C2C52BF697280086AA15 /* ToDoItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF25C2C42BF697280086AA15 /* ToDoItemModel.swift */; };
+		DFA8EC772BF6A5FA0078FAE2 /* ToDoItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA8EC762BF6A5FA0078FAE2 /* ToDoItemViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		DF25C2C02BF68E8F0086AA15 /* AddToDoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoItemView.swift; sourceTree = "<group>"; };
 		DF25C2C22BF694F80086AA15 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DF25C2C42BF697280086AA15 /* ToDoItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemModel.swift; sourceTree = "<group>"; };
+		DFA8EC762BF6A5FA0078FAE2 /* ToDoItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				DF25C2B32BF684C80086AA15 /* Preview Content */,
 				DF25C2AD2BF684C70086AA15 /* ToDoListApp.swift */,
 				DF25C2C32BF696DD0086AA15 /* Models */,
+				DFA8EC752BF6A5E30078FAE2 /* Viewmodels */,
 				DF25C2BB2BF685560086AA15 /* Views */,
 			);
 			path = ToDoList;
@@ -92,6 +95,14 @@
 				DF25C2C42BF697280086AA15 /* ToDoItemModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		DFA8EC752BF6A5E30078FAE2 /* Viewmodels */ = {
+			isa = PBXGroup;
+			children = (
+				DFA8EC762BF6A5FA0078FAE2 /* ToDoItemViewModel.swift */,
+			);
+			path = Viewmodels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +180,7 @@
 				DF25C2C52BF697280086AA15 /* ToDoItemModel.swift in Sources */,
 				DF25C2BD2BF685BA0086AA15 /* ToDoListView.swift in Sources */,
 				DF25C2AE2BF684C70086AA15 /* ToDoListApp.swift in Sources */,
+				DFA8EC772BF6A5FA0078FAE2 /* ToDoItemViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
