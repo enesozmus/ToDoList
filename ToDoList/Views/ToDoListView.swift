@@ -35,7 +35,9 @@ struct ToDoListView: View {
         .navigationTitle("ToDo List 📝")
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
-                EditButton()
+                if !toDoItemViewModel.items.isEmpty {
+                    EditButton()
+                }
             }
             ToolbarItem(placement: .topBarTrailing) {
                 NavigationLink {
