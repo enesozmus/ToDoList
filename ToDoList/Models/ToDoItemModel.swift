@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ToDoItemModel :Identifiable {
+struct ToDoItemModel :Identifiable, Codable {
     var id: String = UUID().uuidString
     
     let title: String
